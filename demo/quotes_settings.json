@@ -1,0 +1,48 @@
+{
+    "project_name": "quotes",
+    "overwrite_option": 1,
+    "links_to_scrape": {
+        "0": [
+            "response.css('li.next a::attr(href)').get()",
+            "http://quotes.toscrape.com/page/1/"
+        ]
+    },
+    "elems_to_select": {
+        "0": [
+            "quote",
+            "css",
+            "div.quote",
+            "text",
+            "None",
+            "get()",
+            {
+                "0": [
+                    "text",
+                    "css",
+                    "span.text",
+                    "text",
+                    "None",
+                    "get()"
+                ],
+                "1": [
+                    "author",
+                    "css",
+                    "small.author",
+                    "text",
+                    "None",
+                    "get()"
+                ],
+                "2": [
+                    "tags",
+                    "css",
+                    "div.tags a.tag",
+                    "text",
+                    "None",
+                    "getall()"
+                ]
+            }
+        ]
+    },
+    "saving_format": ".json",
+    "saving_dir": "/home/aivaras/Desktop/py_projects/easy_scraper"
+}
